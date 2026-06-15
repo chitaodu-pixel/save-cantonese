@@ -306,10 +306,3 @@ export const lostWords: LostWord[] = [
   { id: 'lost-049', word: '核突', meaning: '难看、恶心', jyutping: 'wat6 dat6', example: '地下咁污糟，好核突。', region: '广府常用', explanation: '生活评价词，但对人使用要谨慎。', tags: ['形容'] },
   { id: 'lost-050', word: '污糟', meaning: '脏', jyutping: 'wu1 zou1', example: '只手好污糟，去洗手。', region: '广府常用', explanation: '卫生提醒里很实用。', tags: ['卫生'] },
 ]
-
-export const allDataCounts = {
-  daily: dailyPhrases.length,
-  parentChild: parentChildPhrases.length,
-  mistakes: mistakePhrases.length,
-  lostWords: lostWords.length,
-}

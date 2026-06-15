@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
-  allDataCounts,
   dailyPhrases,
   lostWords,
   mistakePhrases,
@@ -203,11 +202,19 @@ function HomePage({
           ))}
         </div>
       </section>
-      <section className="stats-band">
-        <span>{allDataCounts.daily} 条今日一句</span>
-        <span>{allDataCounts.parentChild} 条亲子粤语</span>
-        <span>{allDataCounts.mistakes} 条直译纠错</span>
-        <span>{allDataCounts.lostWords} 个濒危词</span>
+      <section className="daily-rhythm">
+        <div>
+          <strong>先从一句开始</strong>
+          <span>今天只要讲出口一句，就已经是在传承。</span>
+        </div>
+        <div>
+          <strong>放回家庭场景</strong>
+          <span>起床、吃饭、睡前，比背词更容易坚持。</span>
+        </div>
+        <div>
+          <strong>慢慢养成习惯</strong>
+          <span>不用讲得完美，愿意开口才最重要。</span>
+        </div>
       </section>
     </>
   )
@@ -339,7 +346,7 @@ function SearchPage({
         <span>输入关键词</span>
         <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="例如：瞓觉、上学、jyutping、唔使急" />
       </label>
-      <div className="search-meta">{query ? `找到 ${results.length} 条结果` : '输入后开始搜索全部数据'}</div>
+      <div className="search-meta">{query ? `找到 ${results.length} 个可以马上练习的说法` : '输入后搜索今日一句、亲子场景、直译纠错和濒危词'}</div>
       <div className="card-list">
         {results.map((result) => (
           <SearchResult

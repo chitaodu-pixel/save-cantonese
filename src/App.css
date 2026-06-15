@@ -115,7 +115,7 @@ main {
 .hero-section,
 .page-frame,
 .section-wrap,
-.stats-band {
+.daily-rhythm {
   width: min(1120px, calc(100% - 32px));
   margin-inline: auto;
 }
@@ -245,23 +245,30 @@ main {
   line-height: 1.55;
 }
 
-.stats-band {
+.daily-rhythm {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
   margin-bottom: 54px;
-  background: var(--border);
+}
+
+.daily-rhythm div {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+  background: #fff;
   border: 1px solid var(--border);
   border-radius: 8px;
 }
 
-.stats-band span {
-  padding: 18px;
-  color: var(--green-dark);
-  font-weight: 800;
-  text-align: center;
-  background: #fff;
+.daily-rhythm strong {
+  color: var(--text-strong);
+  font-size: 18px;
+}
+
+.daily-rhythm span {
+  color: var(--text-muted);
+  line-height: 1.65;
 }
 
 .page-heading {
@@ -564,7 +571,7 @@ blockquote {
   }
 
   .feature-grid,
-  .stats-band,
+  .daily-rhythm,
   .two-columns,
   .about-grid {
     grid-template-columns: 1fr;
@@ -579,7 +586,7 @@ blockquote {
   .hero-section,
   .page-frame,
   .section-wrap,
-  .stats-band {
+  .daily-rhythm {
     width: min(100% - 24px, 1120px);
   }
 
